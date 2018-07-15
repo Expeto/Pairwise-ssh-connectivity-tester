@@ -4,6 +4,10 @@ Given a list of hosts, this script will test the ssh connectivity between them. 
 
 ## Config
 Just edit the top of script and modify the hosts.txt address and server passwords. 
+```bash
+input="training_hosts.txt"
+password="asdasd123"
+```
 
 ### Requirements
 sshpass is required.
