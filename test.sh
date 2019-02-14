@@ -31,7 +31,7 @@ do
   
   while IFS= read -r sshtarget
     do
-	    ssh_result=$(sshpass -p "asdasd123" ssh -q -n -t  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null profelis@$host "/usr/bin/sshpass -p $password ssh -q  -o StrictHostKeyChecking=no -o PreferredAuthentications=password -o ConnectTimeout=5 profelis@$sshtarget "exit ; echo $?" " )
+	    ssh_result=$(sshpass -p "$password" ssh -q -n -t  -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null profelis@$host "/usr/bin/sshpass -p $password ssh -q  -o StrictHostKeyChecking=no -o PreferredAuthentications=password -o ConnectTimeout=5 profelis@$sshtarget "exit ; echo $?" " )
 	    echo -n "Checking ssh connection to "
 	    echo -n "$sshtarget , $ssh_result "
     if [ $ssh_result -ne 0 ]
